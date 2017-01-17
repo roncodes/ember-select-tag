@@ -2,6 +2,7 @@ import Ember from 'ember';
 import layout from '../templates/components/select-tag';
 
 export default Ember.Component.extend({
+  layout: layout,
   tagName: 'select',
   attributeBindings: ['name', 'css', 'multiple', 'disabled'],
   disabled: false,
