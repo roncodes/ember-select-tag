@@ -5,7 +5,7 @@
 {{/if}}
 {{#each content as |option|}}
     {{#if optionValue}}
-      <option value={{select-get option optionValue}}>{{ember-get option optionLabel}}</option>
+      <option value={{select-get option optionValue}}>{{select-get option optionLabel}}</option>
     {{else}}
       <option value={{option}}>{{option}}</option>
     {{/if}}

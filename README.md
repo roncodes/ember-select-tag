@@ -1,27 +1,59 @@
-# select-tag
+# ember-select-tag
 
-This README outlines the details of collaborating on this Ember addon.
+ember-select-tag is a basic `<select>` component which strives to replace the old `{{view 'select'}}` while following the modern ember paradigm of "data-down-actions-up" as closely as possible.
+
+## Demo
+
+coming soon
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd select-tag`
-* `npm install`
-* `bower install`
+* npm install ember-select-tag
 
-## Running
+## Using the addon
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+A straight replacement of the old select view would be done in the following way.
 
-## Running Tests
+The following handlebars markup
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+```handlebars
+{{view "select"
+       content=programmers
+       optionValuePath="content.id"
+       optionLabelPath="content.firstName"
+       value=selectedProgrammerId}}
+```
 
-## Building
+can be replaced with
 
-* `ember build`
+```handlebars
+  {{select-tag content=programmers
+                optionValue='id'
+                optionLabel='firstName'
+                value=selectedProgrammerId)}}
+```
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+### Using attribute bindings
+
+The following attribute bindings are supported: `disabled`
+
+
+### Nesting is supported
+
+The following syntax for label and value paths is supported and will work.
+
+```handlebars
+{{select-tag content=myData
+              optionValue='level1.level2.id'
+              optionLabel='level1.level2.label'}}
+```
+
+The corresponding component property will simply be set to the value of the entire selected item in the content array.
+
+### You can use it with a collection of simple strings, or complex objects.
+
+content can be int he format of `['Item A', 'Item B', ...]` or `[ ObjectA, ObjectB, ...]`.
+
+## Ember support
+
+This addon should currently work with ember@2.x
