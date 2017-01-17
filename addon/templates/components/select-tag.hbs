@@ -4,8 +4,8 @@
   <option value="" disabled selected>{{placeholder}}</option>
 {{/if}}
 {{#each content as |option|}}
-    {{#if optionValue}}
-      <option value={{select-get option optionValue}}>{{select-get option optionLabel}}</option>
+    {{#if optionValuePath}}
+      <option value={{select-get option optionValuePath}}>{{select-get option optionLabelPath}}</option>
     {{else}}
       <option value={{option}}>{{option}}</option>
     {{/if}}

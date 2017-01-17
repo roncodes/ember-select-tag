@@ -28,8 +28,8 @@ can be replaced with
 
 ```handlebars
   {{select-tag content=programmers
-                optionValue='id'
-                optionLabel='firstName'
+                optionValuePath='id'
+                optionLabelPath='firstName'
                 value=selectedProgrammerId)}}
 ```
 
@@ -44,8 +44,8 @@ The following syntax for label and value paths is supported and will work.
 
 ```handlebars
 {{select-tag content=myData
-              optionValue='level1.level2.id'
-              optionLabel='level1.level2.label'}}
+              optionValuePath='level1.level2.id'
+              optionLabelPath='level1.level2.label'}}
 ```
 
 The corresponding component property will simply be set to the value of the entire selected item in the content array.
