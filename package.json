@@ -1,12 +1,17 @@
 {
   "name": "select-tag",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "A basic select input for ember.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "select",
+    "select-tag",
+    "select-input",
+    "ember-select",
+    "select-view"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Ronald A. Richardson",
   "directories": {
     "doc": "doc",
     "test": "tests"
