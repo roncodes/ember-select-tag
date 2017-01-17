@@ -1,5 +1,5 @@
 {
-  "name": "select-tag",
+  "name": "ember-select-tag",
   "version": "0.0.1",
   "description": "A basic select input for ember.",
   "keywords": [
